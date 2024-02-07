@@ -5,12 +5,12 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProductsData = async () => {
-      const data = await fetchProducts();
-      setProducts(data);
+    const fetchData = async () => {
+      const productsData = await fetchProducts();
+      setProducts(productsData);
     };
 
-    fetchProductsData();
+    fetchData();
   }, []);
 
   return (
